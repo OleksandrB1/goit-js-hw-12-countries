@@ -3,20 +3,22 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/OleksandrB1/goit-js-hw12",
+  "homepage": "https://oleksandrb1.github.io/goit-js-hw-12-countries",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/",
+    "deploy": "gh-pages -d dist",
+    "predeploy" : "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OleksandrB1/goit-js-hw-12-countries.git"
+    "url": "git+https://github.com/oleksandrb1/goit-js-hw-12-countries.git"
   },
   "keywords": [],
   "author": "Oleksandr Boiko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OleksandrB1/goit-js-hw-12-countries/issues"
+    "url": "https://github.com/oleksandrb1/goit-js-hw-12-countries/issues"
   },
   "devDependencies": {
     "@pnotify/core": "^5.2.0",
@@ -27,6 +29,7 @@
     "posthtml-include": "^1.6.2"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "lodash.debounce": "^4.0.8"
   }
 }
