@@ -22,10 +22,14 @@ refs.input.addEventListener(
 
 function onSearch() {
   resetSearch();
-  foundedCountry = refs.input.value;
-  countriesLink(foundedCountry)
-    .then(renderMarkup)
-    .catch(err => console.log(err));
+  const inputValue = refs.input.value;
+  foundedCountry = inputValue.trimLeft();
+  refs.input.value = foundedCountry;
+  if (foundedCountry) {
+    countriesLink(foundedCountry)
+      .then(renderMarkup)
+      .catch(err => console.log(err));
+  };
 }
 function resultMessage(typeInfo, textInfo) {
   typeInfo({
